@@ -23,8 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5F8785662459F0F700CF37D1 /* BetterReflection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BetterReflection; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F8785662459F0F700CF37D1 /* CXDynTyping */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CXDynTyping; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8785692459F0F700CF37D1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5F8785732459F13700CF37D1 /* TypeSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeSystem.h; sourceTree = "<group>"; };
+		5F878575245AA1ED00CF37D1 /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
+		5F878576245AA1FD00CF37D1 /* Interfaceable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interfaceable.h; sourceTree = "<group>"; };
+		5F878577245AA2E600CF37D1 /* Value.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Value.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,33 +45,54 @@
 		5F87855D2459F0F700CF37D1 = {
 			isa = PBXGroup;
 			children = (
-				5F8785682459F0F700CF37D1 /* BetterReflection */,
-				5F8785672459F0F700CF37D1 /* Products */,
+				5F8785682459F0F700CF37D1 /* CXDynTyping */,
 			);
 			sourceTree = "<group>";
 		};
 		5F8785672459F0F700CF37D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5F8785662459F0F700CF37D1 /* BetterReflection */,
+				5F8785662459F0F700CF37D1 /* CXDynTyping */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		5F8785682459F0F700CF37D1 /* BetterReflection */ = {
+		5F8785682459F0F700CF37D1 /* CXDynTyping */ = {
 			isa = PBXGroup;
 			children = (
+				5F878578245AA48D00CF37D1 /* src */,
+				5F8785672459F0F700CF37D1 /* Products */,
+			);
+			path = CXDynTyping;
+			sourceTree = "<group>";
+		};
+		5F878574245AA1D500CF37D1 /* CXFramework */ = {
+			isa = PBXGroup;
+			children = (
+				5F878575245AA1ED00CF37D1 /* Interface.h */,
+				5F878576245AA1FD00CF37D1 /* Interfaceable.h */,
+			);
+			path = CXFramework;
+			sourceTree = "<group>";
+		};
+		5F878578245AA48D00CF37D1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5F878574245AA1D500CF37D1 /* CXFramework */,
+				5F8785732459F13700CF37D1 /* TypeSystem.h */,
+				5F878577245AA2E600CF37D1 /* Value.h */,
 				5F8785692459F0F700CF37D1 /* main.cpp */,
 			);
-			path = BetterReflection;
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5F8785652459F0F700CF37D1 /* BetterReflection */ = {
+		5F8785652459F0F700CF37D1 /* CXDynTyping */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5F87856D2459F0F700CF37D1 /* Build configuration list for PBXNativeTarget "BetterReflection" */;
+			buildConfigurationList = 5F87856D2459F0F700CF37D1 /* Build configuration list for PBXNativeTarget "CXDynTyping" */;
 			buildPhases = (
 				5F8785622459F0F700CF37D1 /* Sources */,
 				5F8785632459F0F700CF37D1 /* Frameworks */,
@@ -77,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = BetterReflection;
+			name = CXDynTyping;
 			productName = BetterReflection;
-			productReference = 5F8785662459F0F700CF37D1 /* BetterReflection */;
+			productReference = 5F8785662459F0F700CF37D1 /* CXDynTyping */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5F8785612459F0F700CF37D1 /* Build configuration list for PBXProject "BetterReflection" */;
+			buildConfigurationList = 5F8785612459F0F700CF37D1 /* Build configuration list for PBXProject "CXDynTyping" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +133,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F8785652459F0F700CF37D1 /* BetterReflection */,
+				5F8785652459F0F700CF37D1 /* CXDynTyping */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +264,7 @@
 		5F87856E2459F0F700CF37D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J2JYTDMYQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -248,6 +274,7 @@
 		5F87856F2459F0F700CF37D1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J2JYTDMYQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -257,7 +284,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5F8785612459F0F700CF37D1 /* Build configuration list for PBXProject "BetterReflection" */ = {
+		5F8785612459F0F700CF37D1 /* Build configuration list for PBXProject "CXDynTyping" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F87856B2459F0F700CF37D1 /* Debug */,
@@ -266,7 +293,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5F87856D2459F0F700CF37D1 /* Build configuration list for PBXNativeTarget "BetterReflection" */ = {
+		5F87856D2459F0F700CF37D1 /* Build configuration list for PBXNativeTarget "CXDynTyping" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5F87856E2459F0F700CF37D1 /* Debug */,
