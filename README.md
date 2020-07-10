@@ -1,0 +1,2 @@
+# CXDynTyping
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c0da625fa0054579b26e197724150b50)](https://app.codacy.com/manual/osdeverr/CXDynTyping?utm_source=github.com&utm_medium=referral&utm_content=osdeverr/CXDynTyping&utm_campaign=Badge_Grade_Dashboard)
